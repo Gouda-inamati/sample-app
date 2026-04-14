@@ -1,6 +1,9 @@
 const httpd = require('http');
 
-http.createServer((req, res) => {
-  res.write("Hello from Jenkins Pipeline");
-  res.end();
-}).listen(3000);
+const server = http.createServer((req, res) => {
+  res.end("Hello from Jenkins Pipeline working!!");
+});
+
+server.listen(3000, () => {
+  console.log("Server running on port 3000");
+});
